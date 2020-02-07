@@ -399,7 +399,7 @@ iframe {
 }
 
 .input-checkbox100:checked + .label-checkbox100::before {
-  color: #fff;
+  color: #fff   ;
 }
 
 
