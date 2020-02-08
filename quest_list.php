@@ -1,24 +1,6 @@
 <?php
 include ("sidebar_top.html");
 ?>
-<style>
-    .card{
-        border-color: #23b5b5 !important;
-        
-    }
-    
-    .card-link{
-        color: #23b5b5 !important;
-    }
-    .card-title{
-        color: #23b5b5 !important;
-    }
-    
-    .card-header{
-        background-image: url(vendor/Images/questbg.jpg) !important;
-        color: #fff;
-    }
-</style>
 <?php
 include ("sidebar_top2.html");
 ?>
@@ -40,6 +22,7 @@ include ("sidebar_top2.html");
             $count+=1;
             
             $deadline = $row['deadline']==''?"-":$row['deadline'];
+            
 
             $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
             echo "<a href='quest_show.php?id=". $row['id']."'>";

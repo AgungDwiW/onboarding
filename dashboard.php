@@ -14,7 +14,11 @@ include ("sidebar_top2.html");
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 >Welcome back <?php echo $_SESSION['name']; ?>! <br> </h1>
+      <h1 >Welcome back <?php 
+      if ($_SESSION['type']==0) echo "HR ";
+      if ($_SESSION['type']==1) echo "Buddy ";
+      if ($_SESSION['type']==2) echo "Adventurer ";
+      echo $_SESSION['name']; ?>! <br> </h1>
       <h3>There's a lot thing to do today, keep the spirit! </h3>
       
     </header>
@@ -27,7 +31,7 @@ include ("sidebar_top2.html");
     	// ===============================admin card==============================================
     	if ($_SESSION['type'] == 0){
     ?>
-      <div class="col-lg-3 col-md-6 mb-4">
+      <!-- <div class="col-lg-3 col-md-6 mb-6">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/private.png" alt="" style="height :150px">
           <div class="card-body">
@@ -39,8 +43,8 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
+ -->
+     <!--  <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/report.png" alt="" style="height :150px">
           <div class="card-body">
@@ -65,8 +69,8 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
+ -->
+     <!--  
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/quest.png" alt="" style="height :150px">
           <div class="card-body">
@@ -79,7 +83,7 @@ include ("sidebar_top2.html");
         </div>
       </div>
 
-    </div>
+    </div> -->
     <!-- /.row -->
      <?php 
      	}
@@ -113,11 +117,11 @@ include ("sidebar_top2.html");
             echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
             echo "<a href='quest_show.php?id=". $row['id']."'>";
             echo '<div class="card h-100">';
-            echo '<div class="card-header">'.$quest_stat.'</div>';  
             echo '<div class="card-body">';
             echo '<h4 class="card-title">'.$row['title'].'</h4>';
             echo "<hr>";
-            echo '<p class="card-text">'.$subtitle.'</p>';
+            echo '<h5 class="card-subtitle mb-2 text-muted">'.$quest_stat.'</h5>';
+            echo '<p class="card-text">'.$subtitle.'</p></div>';
             echo '<div class="card-footer text-muted">';            
             echo "Reward : ".$row['reward'];
             echo "<br>Deadline : ".$deadline. "</p>";
