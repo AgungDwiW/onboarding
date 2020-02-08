@@ -87,6 +87,37 @@ include ("sidebar_top2.html");
     	// ===============================admin card end==============================================
     	else if ($_SESSION['type'] == 2){
     ?>
+      <?php
+        require('dbcon.php');
+        $sql = "SELECT * FROM quest where is_main = 1 or issued_to =  '" . $_SESSION['id'] . "'";
+        $result = $conn->query($sql);
+        $tot = $result->num_rows;
+        if ($result->num_rows>0) {
+          //login success
+          while($row = $result->fetch_assoc()) {
+            $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
+            
+            echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
+            echo "<a href='quest_show.php?id=". $row['id']."'>";
+            echo '<div class="card h-100">';
+            echo '<div class="card-body">';
+            echo '<h4 class="card-title">'.$row['title'].'</h4>';
+            echo '<h5 class="card-subtitle mb-2 text-muted">'.$quest_stat.'</h5>';
+            echo '<p class="card-text">'.$row['subtitle'].'</p>';
+            echo '<div class="card-footer text-muted">';            
+            echo "Reward :".$row['reward'];
+            echo "</a>";
+            echo "</div></div></div></div>";
+            
+          }
+        }
+        for ($x = $tot; $x<4; $x++){
+          echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
+            echo '<div class="card h-100">';
+            echo "</div></div>";
+        }
+      ?>
+<!--
     <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
           <div class="card-body">
@@ -97,7 +128,7 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
-
+ 
       <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
           <div class="card-body">
@@ -127,7 +158,7 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
-
+ -->
     </div>
     <!-- /.row -->
     <?php 

@@ -32,7 +32,7 @@ include ("sidebar_top2.html");
 		    <label for="title">Quest Type:</label>
 		    <div class="row">
 
-			    <div class="col-sm-4">
+			    <div class="col-sm-6">
 			     	<select class="form-control" name="main" id="main">
 			     		<?php
 			     		if ($_SESSION['type']==0) {
@@ -50,21 +50,21 @@ include ("sidebar_top2.html");
 			     		?>
 			     	</select>
 			    </div>
-			    <div class="col-sm-4">
+			    <div class="col-sm-6">
 			      <select class="form-control" name="stage" id="stage">
 			     		<option>Stage 1</option>
 			     		<option>Stage 2</option>
 			     		<option>Stage 3</option>
 			     	</select>
 			    </div>
-			    <div class="col-sm-4">
+			    <!-- <div class="col-sm-4">
 			      <select class="form-control" name="type" id="type" onchange="changeAct()">
 			     		<option value="test">Test Type</option>
 			     		<option value="submit">Submit Type</option>
 			     		<option value="questionaire">Questionaire Type</option>
 			     	</select>
 			    </div>
-			  </div>
+			  </div> -->
 		</div>
 		<?php 
 		if ($_SESSION['type'] == 1)
