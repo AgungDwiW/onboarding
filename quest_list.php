@@ -1,6 +1,24 @@
 <?php
 include ("sidebar_top.html");
 ?>
+<style>
+    .card{
+        border-color: #23b5b5 !important;
+        
+    }
+    
+    .card-link{
+        color: #23b5b5 !important;
+    }
+    .card-title{
+        color: #23b5b5 !important;
+    }
+    
+    .card-header{
+        background-image: url(vendor/Images/questbg.jpg) !important;
+        color: #fff;
+    }
+</style>
 <?php
 include ("sidebar_top2.html");
 ?>
