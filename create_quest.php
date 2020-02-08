@@ -1,19 +1,20 @@
 <?php
-include ("sidebar_top.html");
-?>
+include ("sidebar_top.html");?>
+
 <?php
 if ($_SESSION['type']!= 0 and $_SESSION['type']!=1){
 	header("Location: index.php");
 	die();
 }
 ?>
+<link rel="stylesheet" type="text/css" href="Style/quest.css">
 <?php
 include ("sidebar_top2.html");
 ?>
 
-<div class="card table-responsive" style="border-radius: 0px !important;">
+<div class="card table-responsive quest-card" >
     <!-- /.card-header -->
-    <div class="card-header">                              
+    <div class="card-header text-center">                              
         Post a quest
     </div>
     <div class="card-body">
@@ -29,6 +30,7 @@ include ("sidebar_top2.html");
 		    <input type="text" class="form-control" placeholder="Quest Subtitle" id="subtitle" name="subtitle">
 		</div>
 		<div class="form-group">
+<<<<<<< HEAD
 			<?php
 	     		if ($_SESSION['type']==0) {
 	     			?>
@@ -48,6 +50,42 @@ include ("sidebar_top2.html");
 			      <select class="form-control" name="type" id="type" onchange="changeAct()">
 			     		<option value="test">Test Type</option>
 			     		<option value="submit">Submit Type</option>
+=======
+		    <label for="title">Quest Type:</label>
+		    <div class="row">
+
+			    <div class="col-sm-4">
+			     	<select class="form-control slt-quest" name="main" id="main">
+			     		<?php
+			     		if ($_SESSION['type']==0) {
+			     			//admin
+			     		?>
+			     		<option>Main quest</option>
+			     		<?php
+			     		}
+			     		if ($_SESSION['type'] == 1)
+			     		{
+			     		?>
+			     		<option>Sub quest</option>
+			     		<?php
+			     		}
+			     		?>
+			     	</select>
+			    </div>
+			    <div class="col-sm-4">
+			      <select class="form-control slt-quest" name="stage" id="stage">
+			     		<option>Stage 1</option>
+			     		<option>Stage 2</option>
+			     		<option>Stage 3</option>
+			     	</select>
+			    </div>
+			    <div class="col-sm-4">
+			      <select class="form-control slt-quest"  name="type" id="type" onchange="changeAct()">
+			     	    <option value="submit">Submit Type</option>	
+                        <option value="test">Test Type</option>
+			     		
+                      
+>>>>>>> 243a8f8a4f29598e5dc889dd9a292e7931b4772b
 			     		<option value="questionaire">Questionaire Type</option>
 			     	</select>
 			    </div>
@@ -99,7 +137,7 @@ include ("sidebar_top2.html");
 		</div>
 		<div id = "before" class="form-group"></div>
 		<div class="form-group">
-			<input type="submit" name="submit" class="btn btn-block" value="POST">
+			<input type="submit" name="submit" class="btn btn-block btn-quest" value="POST">
 		</div>
 		</form>
     </div>
@@ -264,6 +302,8 @@ include ("sidebar_top2.html");
 	}
 	
 </script>
+
 <?php
 include ("sidebar_botom.html");
 ?>
+    

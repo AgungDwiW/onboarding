@@ -19,7 +19,7 @@
 					<span class="login100-form-logo">
 						<img class="login-logo" src="vendor/Images/Iqlogo.png" alt="Interactive Quest logo">
 					</span>
-
+                    <span class="login100-form-title " style="font-size:12px; padding-top:10px;padding-bottom:10px;">Powered by : <img src="vendor/Images/BCA_logo.svg"style="width:75px;"></span>
 					<span class="login100-form-title ">
 						Log in
 					</span>
