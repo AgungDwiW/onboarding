@@ -3,9 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" type="text/css" href="Asset/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     
-    <link rel="stylesheet" type="text/css" href="Asset/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/iconic/css/material-design-iconic-font.min.css">
     <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Style/Login.css">
     <link rel="stylesheet" type="text/css" href="Style/util.css">
@@ -13,11 +13,11 @@
 </head>
 <body>
     <div class="limiter" >
-		<div class="container-login100" style="background-image: url('Asset/Images/Loginbg.jpg');">
+		<div class="container-login100" style="background-image: url('vendor/Images/Loginbg.jpg');">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="POST" action="login.php">
 					<span class="login100-form-logo">
-						<img class="login-logo" src="Asset/Images/Iqlogo.png" alt="Interactive Quest logo">
+						<img class="login-logo" src="vendor/Images/Iqlogo.png" alt="Interactive Quest logo">
 					</span>
 
 					<span class="login100-form-title ">

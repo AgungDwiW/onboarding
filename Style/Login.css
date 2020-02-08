@@ -7,22 +7,22 @@
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../Asset/poppins/Poppins-Regular.ttf'); 
+  src: url('../vendor/poppins/Poppins-Regular.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../Asset/poppins/Poppins-Medium.ttf'); 
+  src: url('../vendor/poppins/Poppins-Medium.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../Asset/poppins/Poppins-Bold.ttf'); 
+  src: url('../vendor/poppins/Poppins-Bold.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../Asset/poppins/Poppins-SemiBold.ttf'); 
+  src: url('../vendor/poppins/Poppins-SemiBold.ttf'); 
 }
 
 
