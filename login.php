@@ -12,12 +12,13 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
 	//login success
 	while($row = $result->fetch_assoc()) {
-		$_SESSION ['type'] = 0;
+		$_SESSION ['type'] = $row['status'];
 		$_SESSION ['id'] = $row['id'];
 		$_SESSION ['name'] = $row['name'];
 		$_SESSION ['email'] = $row ['email'];
 		$_SESSION ['profpic'] = $row['image_profile'];
 		$_SESSION ['class'] = $row['class'];
+		$_SESSION ['credit'] = $row['credit'];
     }
 	header("Location: dashboard.php");
 	die();

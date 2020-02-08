@@ -16,18 +16,28 @@ create table user(
 	email varchar(50),
 	status int,
 	class int,
-	image_profile varchar(50) default 'vendor/Images/Profpic/profile.png',
+	credit int,
+	image_profile varchar(50) default 'Asset/Images/Profpic/profile.png',
 	FOREIGN KEY (class) REFERENCES class(id)
 	-- status 0 = admin
 	-- status 1 = sub admin (buddy)
 	-- status 2 = user (newbie)
 );
 
+create table buddy_newbie(
+	id_newbie int,
+	id_buddy int,
+	FOREIGN key (id_newbie) REFERENCES user (id),
+	FOREIGN key (id_buddy) REFERENCES user (id)
+);
+
 insert into class (name) values("HR");
 insert into class (name) values("IT");
 insert into user (username, password, name, email, status, class) values ("admin", "adminadmin", "superHR", "hr@hr.com", 0, 1);
-insert into user (username, password, name, email, status, class) values ("budy", "budybudy", "budi budiman", "budi@hr.com", 1, 2);
+insert into user (username, password, name, email, status, class, credit) values ("budy", "budybudy", "budi budiman", "budi@hr.com", 1, 2, 25);
 insert into user (username, password, name, email, status, class) values ("newbie", "newbie", "newbie noob", "noob@hr.com", 2, 2);
+
+insert into buddy_newbie(id_newbie, id_buddy) values (3,2);
 
 create table quest(
 	id int auto_increment primary key,
@@ -37,6 +47,7 @@ create table quest(
 	type varchar(20),
 	stage int,
 	issued int,
+	deadline int,
 	FOREIGN key (issued) REFERENCES user(id)
 	-- type:
 	-- 		- submit
@@ -80,6 +91,7 @@ create table quest_progression(
 	id_user int,
 	id_quest int,
 	progress boolean,
+	start date,
 	FOREIGN key (id_user) REFERENCES user(id),
 	FOREIGN key (id_quest) REFERENCES quest(id)
 );
@@ -91,7 +103,8 @@ create table submit_answer(
 	answer text,
 	FOREIGN key (id_quest) REFERENCES quest (id),
 	FOREIGN key (id_user) REFERENCES user (id)
-)
+);
+
 
 insert into quest(title, subtitle, is_main, type, stage) values ("Test for new adventurer", "This vilage is already well fed and comfortable to live in but best thing won't last forever, 
 		    we need champion to protect our vilage from future threat", 1, "test", 1);
