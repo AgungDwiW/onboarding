@@ -17,7 +17,7 @@ include ("sidebar_top2.html");
         Post a quest
     </div>
     <div class="card-body">
-    	<form method="POST" action="create_test.php" id = "form" id = "form">
+    	<form method="POST" action="<?php echo($_SESSION['type']==0?"post_main_quest.php":"post_side_quest.php") ?>" id = "form" id = "form">
     	<div class="form-group">
 		    <label for="title">Title:</label>
 		    <input type="text" class="form-control" placeholder="Quest Title" id="title" name="title">
@@ -29,34 +29,21 @@ include ("sidebar_top2.html");
 		    <input type="text" class="form-control" placeholder="Quest Subtitle" id="subtitle" name="subtitle">
 		</div>
 		<div class="form-group">
-		    <label for="title">Quest Type:</label>
-		    <div class="row">
-
-			    <div class="col-sm-6">
-			     	<select class="form-control" name="main" id="main">
-			     		<?php
-			     		if ($_SESSION['type']==0) {
-			     			//admin
-			     		?>
-			     		<option>Main quest</option>
-			     		<?php
-			     		}
-			     		if ($_SESSION['type'] == 1)
-			     		{
-			     		?>
-			     		<option>Sub quest</option>
-			     		<?php
-			     		}
-			     		?>
-			     	</select>
-			    </div>
-			    <div class="col-sm-6">
-			      <select class="form-control" name="stage" id="stage">
-			     		<option>Stage 1</option>
-			     		<option>Stage 2</option>
-			     		<option>Stage 3</option>
-			     	</select>
-			    </div>
+			<?php
+	     		if ($_SESSION['type']==0) {
+	     			?>
+	     			<div class="form-group">
+	     				<label for="title">Stage:</label>
+				      <select class="form-control" name="stage" id="stage">
+				     		<option value="1">Stage 1</option>
+				     		<option value="2">Stage 2</option>
+				     		<option value="3">Stage 3</option>
+				     	</select>
+				    </div>
+	     			<?php
+     			//admin
+	     		}
+			?>
 			    <!-- <div class="col-sm-4">
 			      <select class="form-control" name="type" id="type" onchange="changeAct()">
 			     		<option value="test">Test Type</option>
