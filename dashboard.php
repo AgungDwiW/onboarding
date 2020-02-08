@@ -31,7 +31,7 @@ include ("sidebar_top2.html");
     	// ===============================admin card==============================================
     	if ($_SESSION['type'] == 0){
     ?>
-      <!-- <div class="col-lg-3 col-md-6 mb-6">
+       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/private.png" alt="" style="height :150px">
           <div class="card-body">
@@ -43,8 +43,8 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
- -->
-     <!--  <div class="col-lg-3 col-md-6 mb-4">
+ 
+       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/report.png" alt="" style="height :150px">
           <div class="card-body">
@@ -69,8 +69,8 @@ include ("sidebar_top2.html");
           </div>
         </div>
       </div>
- -->
-     <!--  
+ 
+      <div class="col-lg-3 col-md-6 mb-4"> 
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/quest.png" alt="" style="height :150px">
           <div class="card-body">
@@ -83,7 +83,7 @@ include ("sidebar_top2.html");
         </div>
       </div>
 
-    </div> -->
+    </div> 
     <!-- /.row -->
      <?php 
      	}
