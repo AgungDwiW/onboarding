@@ -40,7 +40,6 @@ include ("sidebar_top2.html");
             $count+=1;
             
             $deadline = $row['deadline']==''?"-":$row['deadline'];
-            
 
             $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
             echo "<a href='quest_show.php?id=". $row['id']."'>";

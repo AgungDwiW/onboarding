@@ -59,32 +59,12 @@ $result = $conn->query($sql);
 $sql = "update user set side_completed = ".$side." where id = ". $_SESSION['id'];
 $result = $conn->query($sql);
 
-$sql = "update quest set completed = 1  where id = ". $_POST['id'];
-$result = $conn->query($sql);
 
-$sql = "insert into submit_quest (id_user, id_quest, file, submitted) values('".$_SESSION['id']."','". $_POST['id'] . "','". $target_file ."', '".date("Y-m-d")."')";
+
+$sql = "insert into submit_quest (id_user, id_quest, file) values('".$_SESSION['id']."','". $_POST['id'] . "','". $target_file ."')";
 
 $result = $conn->query($sql);
 // echo "$sql";
-$sql = "SELECT * FROM user where id = " . $_SESSION['id'];
-$result = $conn->query($sql);
-
-if ($result->num_rows == 1) {
-	//login success
-	while($row = $result->fetch_assoc()) {
-		$_SESSION['main'] = $row['main_completed'];
-		$_SESSION['side'] = $row['side_completed'];
-		$_SESSION['stage'] = $row['current_stage'];
-		$_SESSION ['type'] = $row['status'];
-		$_SESSION ['id'] = $row['id'];
-		$_SESSION ['name'] = $row['name'];
-		$_SESSION ['email'] = $row ['email'];
-		$_SESSION ['profpic'] = $row['image_profile'];
-		$_SESSION ['class'] = $row['class'];
-		$_SESSION ['credit'] = $row['credit'];
-    }
-}
-
 header("Location: completed_quest.php");
 die();
 

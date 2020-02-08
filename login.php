@@ -12,9 +12,6 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
 	//login success
 	while($row = $result->fetch_assoc()) {
-		$_SESSION['main'] = $row['main_completed'];
-		$_SESSION['side'] = $row['side_completed'];
-		$_SESSION['stage'] = $row['current_stage'];
 		$_SESSION ['type'] = $row['status'];
 		$_SESSION ['id'] = $row['id'];
 		$_SESSION ['name'] = $row['name'];
@@ -32,4 +29,3 @@ else{
 }
 
 ?>
-
