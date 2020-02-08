@@ -16,7 +16,7 @@ create table user(
 	email varchar(50),
 	status int,
 	class int,
-	image_profile varchar(50) default 'Asset/Images/Profpic/profile.png',
+	image_profile varchar(50) default 'vendor/Images/Profpic/profile.png',
 	FOREIGN KEY (class) REFERENCES class(id)
 	-- status 0 = admin
 	-- status 1 = sub admin (buddy)

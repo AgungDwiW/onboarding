@@ -2,7 +2,7 @@
 include ("sidebar_top.html");
 ?>
 
-<link href="profile.css" rel="stylesheet" id="bootstrap-css">
+<link href="Style/profile.css" rel="stylesheet" id="bootstrap-css">
 <!------ Include the above in your HEAD tag ---------->
 
 

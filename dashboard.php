@@ -7,7 +7,7 @@ include ("sidebar_top2.html");
 
   <!-- Navigation -->
   <!-- Page Content -->
-  <div class="container">
+  <div class="container" >
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
