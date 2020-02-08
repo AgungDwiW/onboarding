@@ -2,6 +2,12 @@
 include ("sidebar_top.html");
 ?>
 <?php
+if ($_SESSION['type']!= 0 and $_SESSION['type']!=1){
+	header("Location: index.php");
+	die();
+}
+?>
+<?php
 include ("sidebar_top2.html");
 ?>
 
@@ -25,10 +31,23 @@ include ("sidebar_top2.html");
 		<div class="form-group">
 		    <label for="title">Quest Type:</label>
 		    <div class="row">
+
 			    <div class="col-sm-4">
 			     	<select class="form-control" name="main" id="main">
+			     		<?php
+			     		if ($_SESSION['type']==0) {
+			     			//admin
+			     		?>
 			     		<option>Main quest</option>
+			     		<?php
+			     		}
+			     		else 
+			     		{
+			     		?>
 			     		<option>Sub quest</option>
+			     		<?php
+			     		}
+			     		?>
 			     	</select>
 			    </div>
 			    <div class="col-sm-4">
