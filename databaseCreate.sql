@@ -41,73 +41,40 @@ insert into buddy_newbie(id_newbie, id_buddy) values (3,2);
 
 create table quest(
 	id int auto_increment primary key,
-	title varchar (50),
-	subtitle varchar (100),
+	title varchar (100),
+	subtitle varchar (500),
 	is_main boolean,
 	type varchar(20),
 	stage int,
-	issued int,
+	issued_by int,
 	deadline int,
-	FOREIGN key (issued) REFERENCES user(id)
+	reward int,
+	issued_to int,
+	FOREIGN key (issued_to) REFERENCES user(id),
+	FOREIGN key (issued_by) REFERENCES user(id)
 	-- type:
 	-- 		- submit
 	-- 		- test
 	--		- quisioner
 );
 
-create table test_question(
-	id int auto_increment primary key,
-	id_quest int,
-	question varchar (50),
-	FOREIGN key (id_quest) REFERENCES quest(id)
-);
-
-create table test_question_choice(
-	id int auto_increment primary key,
-	id_question int,
-	choice varchar(50),
-	is_true boolean,
-	FOREIGN key (id_question) REFERENCES test_question(id)
-);
-
-create table test_answer(
-	id_user int,
-	id_choice int,
-	is_true boolean,
-	FOREIGN key (id_user) REFERENCES user(id),
-	FOREIGN key (id_choice) REFERENCES test_question_choice(id)
-);
-
-create table submit_question(
-	id int auto_increment primary key,
-	id_quest int,
-	id_user int,
-	question varchar(100),
-	FOREIGN key (id_quest) REFERENCES quest(id),
-	FOREIGN key (id_user) REFERENCES user(id)
-);
-
-create table quest_progression(
-	id_user int,
-	id_quest int,
-	progress boolean,
-	start date,
-	FOREIGN key (id_user) REFERENCES user(id),
-	FOREIGN key (id_quest) REFERENCES quest(id)
-);
-
-create table submit_answer(
+create table submit_quest(
 	id int auto_increment primary key,
 	id_user int,
 	id_quest int,
-	answer text,
+	file text,
 	FOREIGN key (id_quest) REFERENCES quest (id),
 	FOREIGN key (id_user) REFERENCES user (id)
 );
 
+insert into quest(title, subtitle, is_main, type, stage, issued_by, reward ) values ("Take a photo of your new work place", 
+	"Welcome to BCA we are happy to have you aboard. How is it? have you reached your work station? Please submit a photo of your workstation for us to see.",
+	 1, "submit", 1, 1, 10);
 
-insert into quest(title, subtitle, is_main, type, stage) values ("Test for new adventurer", "This vilage is already well fed and comfortable to live in but best thing won't last forever, 
-		    we need champion to protect our vilage from future threat", 1, "test", 1);
+insert into quest(title, subtitle, is_main, type, stage, issued_by, reward ) values ("Have you meet your neighbour?", 
+	"He/She is your closest coleague for some time while you're stationed at your current workstation. Have you meet them? If so, please submit the photo of three of you together!",  
+	1, "submit", 1, 1, 10);
 
-insert into quest(title, subtitle, is_main, type, stage) values ("Test for new adventurer", "This vilage is already well fed and comfortable to live in but best thing won't last forever, 
-		    we need champion to protect our vilage from future threat", 1, "test", 1);
+insert into quest(title, subtitle, is_main, type, stage, issued_by, reward, issued_to ) values ("Hello there, I'm your buddy!", 
+	"My name is Budi Budiman, hello I'm assigned as your buddy! I'm as happy as I am but at the same time I'm also sleepy, i haven't sleep last night because of my neighbour. Can you bring me a cup of coffe? I will wait at my desk at 6th row. Let's take a pic together to comemorate your new job!", 
+	1, "submit", 0, 2, 5, 3);
