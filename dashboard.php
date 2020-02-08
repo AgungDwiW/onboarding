@@ -96,15 +96,25 @@ include ("sidebar_top2.html");
         if ($result->num_rows>0) {
           //login success
           while($row = $result->fetch_assoc()) {
+            $sql = "SELECT * FROM submit_quest where id_user = ".$_SESSION['id']." and id_quest =  '" . $row['id'] . "'";
+            $result2 = $conn->query($sql);
+            if ($result2->num_rows>0){
+              $tot-=1;
+              continue;
+            }
+            $subtitle = substr($row['subtitle'],0,80) ;
+            $subtitle = "".$subtitle . "..."; 
+
+
             $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
-            
             echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
             echo "<a href='quest_show.php?id=". $row['id']."'>";
             echo '<div class="card h-100">';
             echo '<div class="card-body">';
             echo '<h4 class="card-title">'.$row['title'].'</h4>';
+            echo "<hr>";
             echo '<h5 class="card-subtitle mb-2 text-muted">'.$quest_stat.'</h5>';
-            echo '<p class="card-text">'.$row['subtitle'].'</p>';
+            echo '<p class="card-text">'.$subtitle.'</p>';
             echo '<div class="card-footer text-muted">';            
             echo "Reward :".$row['reward'];
             echo "</a>";
