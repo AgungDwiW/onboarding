@@ -15,9 +15,7 @@ create table user(
 	credit int default 0,
 	main_completed int default 0,
 	side_completed int default 0,
-	image_profile varchar(50) default 'uploads/profpic/profile.png',
-	current_stage int default 1,
-	has_log_in boolean default 0
+	image_profile varchar(50) default 'Asset/Images/Profpic/profile.png'
 	-- status 0 = admin
 	-- status 1 = sub admin (buddy)
 	-- status 2 = user (newbie)
@@ -47,7 +45,7 @@ create table quest(
 	deadline int,
 	reward int,
 	issued_to int,
-	completed boolean default 0,
+	
 	FOREIGN key (issued_to) REFERENCES user(id),
 	FOREIGN key (issued_by) REFERENCES user(id)
 	-- type:
@@ -61,7 +59,6 @@ create table submit_quest(
 	id_user int,
 	id_quest int,
 	file text,
-	submitted date,
 	FOREIGN key (id_quest) REFERENCES quest (id),
 	FOREIGN key (id_user) REFERENCES user (id)
 );

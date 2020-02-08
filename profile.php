@@ -29,17 +29,17 @@ include ("sidebar_top2.html");
         ?>
         <div class="row col-sm-12 text-center divider">
             <div class=" col-sm-4 emphasis">
-                <h2><strong> <?php echo $_SESSION['main']; ?></strong></h2>                    
+                <h2><strong> 1 </strong></h2>                    
                 <p><small>Main Quest Done</small></p>
                 <!-- <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button> -->
             </div>
             <div class=" col-sm-4 emphasis">
-                <h2><strong><?php echo $_SESSION['side']; ?></strong></h2>                    
+                <h2><strong>0</strong></h2>                    
                 <p><small>Sub Quest Done</small></p>
                 <!-- <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button> -->
             </div>
             <div class=" col-sm-4 emphasis">
-                <h2><strong><?php echo $_SESSION['stage']; ?></strong></h2>                    
+                <h2><strong>1</strong></h2>                    
                 <p><small>Stage</small></p>
             </div>
         </div>
