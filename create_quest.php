@@ -32,7 +32,7 @@ include ("sidebar_top2.html");
 		    <input type="text" class="form-control" placeholder="Quest Subtitle" id="subtitle" name="subtitle">
 		</div>
 		<div class="form-group">
-<<<<<<< HEAD
+
 			<?php
 	     		if ($_SESSION['type']==0) {
 	     			?>

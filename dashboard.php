@@ -29,7 +29,7 @@ include ("sidebar_top2.html");
     ?>
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top " src="vendor/Images/private.png" alt="" style="height :150px">
+          <img class="card-img-top" src="vendor/Images/private.png" alt="" style="height :150px">
           <div class="card-body">
             <h4 class="card-title">Recruit new adventurer</h4>
             <p class="card-text">Call new adventurer to the village</p>

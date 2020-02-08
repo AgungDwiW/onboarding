@@ -1,4 +1,6 @@
- 
+body{
+    
+}
 
 .imgicon {
     width: 500px;
@@ -6,6 +8,15 @@
 }
 
 .btn-primary{
-    background-color: #23b5b5 !important;
-    color: #fff
+    background-color: #23b5b5;
+    color: #fff;
 }
+
+
+.new-card{
+    
+    max-height: 300px;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
