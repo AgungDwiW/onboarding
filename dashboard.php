@@ -94,7 +94,8 @@ include ("sidebar_top2.html");
     ?>
       <?php
         require('dbcon.php');
-        $sql = "SELECT * FROM quest where is_main = 1 or issued_to =  '" . $_SESSION['id'] . "'";
+        $sql = "SELECT * FROM quest where (is_main = 1 and stage = ".$_SESSION['stage'].") or issued_to =  '" . $_SESSION['id'] . "'";
+        
         $result = $conn->query($sql);
         $tot = $result->num_rows;
         if ($result->num_rows>0) {

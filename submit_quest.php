@@ -63,8 +63,16 @@ $sql = "update quest set completed = 1  where id = ". $_POST['id'];
 $result = $conn->query($sql);
 
 $sql = "insert into submit_quest (id_user, id_quest, file, submitted) values('".$_SESSION['id']."','". $_POST['id'] . "','". $target_file ."', '".date("Y-m-d")."')";
-
 $result = $conn->query($sql);
+
+
+if ($main ==2){
+	$sql = "update user set current_stage = 2 where id = ". $_SESSION['id'];
+	$result = $conn->query($sql);
+	$_SESSION['stage'] = 2;
+}
+
+
 // echo "$sql";
 $sql = "SELECT * FROM user where id = " . $_SESSION['id'];
 $result = $conn->query($sql);

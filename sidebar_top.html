@@ -24,11 +24,31 @@
     <script src="assets/js/solid.js"></script>
     <script defer src="assets/js/fontawesome.js" crossorigin="anonymous"></script>
     
-    
+    <?php
+    if($_SESSION['stage']!=2){
+    ?> 
     <style>
         .jumbotron{
             border-radius: 50px;
             text-align: center;
             background-image: url(vendor/Images/mainbg.jpg);
         }
+        
     </style>
+    <?php 
+    }
+    if($_SESSION['stage']==2){
+    ?>
+<style>
+        .jumbotron{
+            border-radius: 50px;
+            text-align: center;
+            background-image: url(vendor/Images/bgS2.jpg);
+        }
+        
+    </style>
+    <?php
+} ?>
+
+   
+

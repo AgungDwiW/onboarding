@@ -77,3 +77,9 @@ insert into quest(title, subtitle, is_main, type, stage, issued_by, reward ) val
 insert into quest(title, subtitle, is_main, type, stage, issued_by, reward, issued_to ) values ("Hello there, I'm your buddy!", 
 	"My name is Budi Budiman, hello I'm assigned as your buddy! I'm as happy as I am but at the same time I'm also sleepy, i haven't sleep last night because of my neighbour. Can you bring me a cup of coffe? I will wait at my desk at 6th row. Let's take a pic together to comemorate your new job!", 
 	0, "submit", 0, 2, 5, 3);
+
+
+
+insert into quest(title, subtitle, is_main, type, stage, issued_by, reward ) values ("Go look at the club!", 
+	"looks like you have been somewhat accustomed to your workstation, now how about people from other division? Go see them at their club, and please take a photo of you and one of them!",
+	 1, "submit", 2, 1, 10);
