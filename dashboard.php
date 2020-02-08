@@ -47,7 +47,19 @@ include ("sidebar_top2.html");
     	// ===============================admin card==============================================
     	if ($_SESSION['type'] == 0){
     ?>
-        
+        <div class="col-lg-3 col-md-6 mb-4"> 
+        <div class="card h-100">
+          <img class="card-img-top" src="vendor/Images/quest.png" alt="" style="height :150px">
+          <div class="card-body">
+            <h4 class="card-title">Give Quest</h4>
+            <p class="card-text">Give quest to the adventurer!</p>
+          </div>
+          <div class="card-footer">
+            <a href="main_quest.php" class="btn btn-primary">Quest</a>
+          </div>
+        </div>
+      </div>
+
        <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/private.png" alt="" style="height :150px">
@@ -65,41 +77,29 @@ include ("sidebar_top2.html");
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/report.png" alt="" style="height :150px">
           <div class="card-body">
-            <h4 class="card-title">Adventurer Report</h4>
-            <p class="card-text">Look at the overal report of adventurers</p>
+            <h4 class="card-title">Recruit new budy</h4>
+            <p class="card-text">Ask a vilager to company the new adventurer</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary" >Report</a>
+            <a href="#" class="btn btn-primary" >Recruit</a>
           </div>
         </div>
       </div>
 
       <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="vendor/Images/tree.jpg" alt="" style="height :150px">
+       <div class="card h-100">
+          <!-- <img class="card-img-top" src="vendor/Images/tree.jpg" alt="" style="height :150px">
           <div class="card-body">
             <h4 class="card-title">Stage Building</h4>
             <p class="card-text">Design the stage for your adventurer</p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary" >Stage</a>
-          </div>
+          </div> -->
         </div>
       </div>
  
-      <div class="col-lg-3 col-md-6 mb-4"> 
-        <div class="card h-100">
-          <img class="card-img-top" src="vendor/Images/quest.png" alt="" style="height :150px">
-          <div class="card-body">
-            <h4 class="card-title">Give Quest</h4>
-            <p class="card-text">Give quest to the adventurer!</p>
-          </div>
-          <div class="card-footer">
-            <a href="main_quest.php" class="btn btn-primary">Quest</a>
-          </div>
-        </div>
-      </div>
-
+      
     </div> 
     <!-- /.row -->
      <?php 

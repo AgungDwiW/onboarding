@@ -13,7 +13,7 @@ include ("sidebar_top2.html");
     <div class="card-body">
 		<div class="row">
 			<div class="col-sm-1">
-				<a href="hire_adventurer.php"><button type="button" class="btn btn-primary btn-block">+</button></a>
+				<a href="hire_adventurer.php"><button type="button" class="btn btn-primary btn-block">Hire Adventurer</button></a>
 			</div>
 			<div class="col-sm-8">
 				

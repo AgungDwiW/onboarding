@@ -111,16 +111,16 @@ include ("sidebar_top2.html");
 		</div>
 		<div class="form-group">
 			<label for="title">To:</label>
-		    <select class="form-control" name="stage" id="stage">
+		    <select class="form-control" name="issued_to" id="issued_to">
 
 			     	<?php
 						require ("dbcon.php");
-						$sql = 'SELECT user.name FROM buddy_newbie INNER JOIN user ON buddy_newbie.id_newbie=user.id';
+						$sql = 'SELECT user.name, user.id FROM buddy_newbie INNER JOIN user ON buddy_newbie.id_newbie=user.id';
 						$result = $conn->query($sql);
 						if ($result->num_rows >= 1) {
 							//login success
 							while($row = $result->fetch_assoc()) {
-								echo "<option>".$row['name']."</option>";			
+								echo "<option value=".$row['id'].">".$row['name']."</option>";			
 						    }
 						}
 			     	?>

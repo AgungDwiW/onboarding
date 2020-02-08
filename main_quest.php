@@ -24,7 +24,7 @@ include ("sidebar_top2.html");
 			</div>
             
             <div class="col-sm-1">
-				<a href="create_quest.php"><button type="button" class="btn btn-primary btn-block">+</button></a>
+				<a href="create_quest.php"><button type="button" class="btn btn-primary btn-block">Post Quest</button></a>
 			</div>
 			<div class="col-sm-8">
 				
