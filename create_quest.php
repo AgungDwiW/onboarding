@@ -59,7 +59,6 @@ include ("sidebar_top2.html");
 			    </div>
 			    <div class="col-sm-4">
 			      <select class="form-control" name="type" id="type" onchange="changeAct()">
-			      		<option></option>
 			     		<option value="test">Test Type</option>
 			     		<option value="submit">Submit Type</option>
 			     		<option value="questionaire">Questionaire Type</option>
@@ -121,18 +120,6 @@ include ("sidebar_top2.html");
 <script type="text/javascript">
 	var before = document.getElementById("before");
 	var form = document.getElementById("form");
-	function addElement () { 
-	  // create a new div element 
-	  var newDiv = document.createElement("div"); 
-	  // and give it some content 
-	  var newContent = document.createTextNode("Hi there and greetings!"); 
-	  // add the text node to the newly created div
-	  newDiv.appendChild(newContent);  
-
-	  // add the newly created element and its content into the DOM 
-	  var currentDiv = document.getElementById("div1"); 
-	  document.body.insertBefore(newDiv, currentDiv); 
-	}
 	var question_num = 0;
 	function changeAct() {
 		
@@ -143,142 +130,145 @@ include ("sidebar_top2.html");
 
 		
 		if (val == "test"){
-			body.parentNode.removeChild(body);
-			var body = document.createElement("div"); 
-			body.setAttribute("id", "quest_body");
+			form.action = "create_test.php";
+			// body.parentNode.removeChild(body);
+			// var body = document.createElement("div"); 
+			// body.setAttribute("id", "quest_body");
 
-			var question_num = 0;
-			var form_group = document.createElement("div"); 
-			form_group.setAttribute("class", "form-group");
-			body.appendChild(form_group);
-			form.insertBefore(body,before);	
+			// var question_num = 0;
+			// var form_group = document.createElement("div"); 
+			// form_group.setAttribute("class", "form-group");
+			// body.appendChild(form_group);
+			// form.insertBefore(body,before);	
 			
-			var input = document.createElement("input"); 
-			input.setAttribute("class", "form-control");
-			input.setAttribute("type", "text");
-			input.setAttribute("placeholder", "question text");
+			// var input = document.createElement("input"); 
+			// input.setAttribute("class", "form-control");
+			// input.setAttribute("type", "text");
+			// input.setAttribute("placeholder", "question text");
 
-			input.addEventListener("onactivate", add_question());
-			var label = document.createElement("label");
-			label.innerHTML = "Question Text:"
-			form_group.appendChild(label);
-			form_group.appendChild(input);
+			// input.addEventListener("onactivate", add_question());
+			// var label = document.createElement("label");
+			// label.innerHTML = "Question Text:"
+			// form_group.appendChild(label);
+			// form_group.appendChild(input);
 
-			var form_group2 = document.createElement("div"); 
-			form_group2.setAttribute("class", "row");
+			// var form_group2 = document.createElement("div"); 
+			// form_group2.setAttribute("class", "row");
 			
 			
 
-			var choice1 = document.createElement("input");
-			choice1.setAttribute("class", "form-control");
-			choice1.setAttribute("type", "text");
-			choice1.setAttribute("name", "choice1")
-			choice1.setAttribute("placeholder", "choice1")
+			// var choice1 = document.createElement("input");
+			// choice1.setAttribute("class", "form-control");
+			// choice1.setAttribute("type", "text");
+			// choice1.setAttribute("name", "choice1")
+			// choice1.setAttribute("placeholder", "choice1")
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-5");
-			form_group2.appendChild(col);
-			col.appendChild(choice1);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-5");
+			// form_group2.appendChild(col);
+			// col.appendChild(choice1);
 
-			var check1 = document.createElement("input");
-			check1.setAttribute("type", "radio");
-			check1.setAttribute("class", "form-check-input col-sm-1");
-			check1.setAttribute("name", "check1");
+			// var check1 = document.createElement("input");
+			// check1.setAttribute("type", "radio");
+			// check1.setAttribute("class", "form-check-input col-sm-1");
+			// check1.setAttribute("name", "check1");
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-1");
-			form_group2.appendChild(col);
-			col.appendChild(check1);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-1");
+			// form_group2.appendChild(col);
+			// col.appendChild(check1);
 			
-			var choice2 = document.createElement("input");
-			choice2.setAttribute("class", "form-control");
-			choice2.setAttribute("type", "text");
-			choice2.setAttribute("name", "choice2")
-			choice2.setAttribute("placeholder", "choice2")
+			// var choice2 = document.createElement("input");
+			// choice2.setAttribute("class", "form-control");
+			// choice2.setAttribute("type", "text");
+			// choice2.setAttribute("name", "choice2")
+			// choice2.setAttribute("placeholder", "choice2")
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-5");
-			form_group2.appendChild(col);
-			col.appendChild(choice2);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-5");
+			// form_group2.appendChild(col);
+			// col.appendChild(choice2);
 
-			var check2 = document.createElement("input");
-			check2.setAttribute("type", "radio");
-			check2.setAttribute("class", "form-check-input col-sm-1");
-			check2.setAttribute("name", "check1");
+			// var check2 = document.createElement("input");
+			// check2.setAttribute("type", "radio");
+			// check2.setAttribute("class", "form-check-input col-sm-1");
+			// check2.setAttribute("name", "check1");
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-1");
-			form_group2.appendChild(col);
-			col.appendChild(check2);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-1");
+			// form_group2.appendChild(col);
+			// col.appendChild(check2);
 
 		
 			
 		
-			body.appendChild(form_group2);
+			// body.appendChild(form_group2);
 
-				var form_group2 = document.createElement("div"); 
-			form_group2.setAttribute("class", "row");
+			// 	var form_group2 = document.createElement("div"); 
+			// form_group2.setAttribute("class", "row");
 
-			var choice1 = document.createElement("input");
-			choice1.setAttribute("class", "form-control");
-			choice1.setAttribute("type", "text");
-			choice1.setAttribute("name", "choice3")
-			choice1.setAttribute("placeholder", "choice3")
+			// var choice1 = document.createElement("input");
+			// choice1.setAttribute("class", "form-control");
+			// choice1.setAttribute("type", "text");
+			// choice1.setAttribute("name", "choice3")
+			// choice1.setAttribute("placeholder", "choice3")
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-5");
-			form_group2.appendChild(col);
-			col.appendChild(choice1);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-5");
+			// form_group2.appendChild(col);
+			// col.appendChild(choice1);
 
-			var check1 = document.createElement("input");
-			check1.setAttribute("type", "radio");
-			check1.setAttribute("class", "form-check-input col-sm-1");
-			check1.setAttribute("name", "check1");
+			// var check1 = document.createElement("input");
+			// check1.setAttribute("type", "radio");
+			// check1.setAttribute("class", "form-check-input col-sm-1");
+			// check1.setAttribute("name", "check1");
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-1");
-			form_group2.appendChild(col);
-			col.appendChild(check1);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-1");
+			// form_group2.appendChild(col);
+			// col.appendChild(check1);
 			
-			var choice2 = document.createElement("input");
-			choice2.setAttribute("class", "form-control");
-			choice2.setAttribute("type", "text");
-			choice2.setAttribute("name", "choice4")
-			choice2.setAttribute("placeholder", "choice4")
+			// var choice2 = document.createElement("input");
+			// choice2.setAttribute("class", "form-control");
+			// choice2.setAttribute("type", "text");
+			// choice2.setAttribute("name", "choice4")
+			// choice2.setAttribute("placeholder", "choice4")
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-5");
-			form_group2.appendChild(col);
-			col.appendChild(choice2);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-5");
+			// form_group2.appendChild(col);
+			// col.appendChild(choice2);
 
-			var check2 = document.createElement("input");
-			check2.setAttribute("type", "radio");
-			check2.setAttribute("class", "form-check-input col-sm-1");
-			check2.setAttribute("name", "check1");
+			// var check2 = document.createElement("input");
+			// check2.setAttribute("type", "radio");
+			// check2.setAttribute("class", "form-check-input col-sm-1");
+			// check2.setAttribute("name", "check1");
 
-			var col = document.createElement("div");
-			col.setAttribute("class", "col-sm-1");
-			form_group2.appendChild(col);
-			col.appendChild(check2);
+			// var col = document.createElement("div");
+			// col.setAttribute("class", "col-sm-1");
+			// form_group2.appendChild(col);
+			// col.appendChild(check2);
 
 
 
-			body.appendChild(form_group2);
+			// body.appendChild(form_group2);
 
 
 		}
 		else if (val=="submit"){
-			body.parentNode.removeChild(body);
-			var body = document.createElement("div"); 
-			body.setAttribute("id", "quest_body");
-			form.insertBefore(body,before);	
+			form.action = "create_submit.php";
+			// body.parentNode.removeChild(body);
+			// var body = document.createElement("div"); 
+			// body.setAttribute("id", "quest_body");
+			// form.insertBefore(body,before);	
 
 		}
 		else {
-			body.parentNode.removeChild(body);
-			var body = document.createElement("div"); 
-			body.setAttribute("id", "quest_body");
-			form.insertBefore(body,before);	
+			form.action = "create_quis.php";
+			// body.parentNode.removeChild(body);
+			// var body = document.createElement("div"); 
+			// body.setAttribute("id", "quest_body");
+			// form.insertBefore(body,before);	
 		}
 	}
 	function add_question(){
