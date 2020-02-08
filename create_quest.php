@@ -7,14 +7,16 @@ if ($_SESSION['type']!= 0 and $_SESSION['type']!=1){
 	die();
 }
 ?>
+
 <link rel="stylesheet" type="text/css" href="Style/quest.css">
+
 <?php
 include ("sidebar_top2.html");
 ?>
 
 <div class="card table-responsive quest-card" >
     <!-- /.card-header -->
-    <div class="card-header text-center">                              
+    <div class="card-header text-center quest-head">                              
         Post a quest
     </div>
     <div class="card-body">

@@ -11,7 +11,7 @@
                 <i class="fas fa-arrow-left"></i>   
             </div>
 
-            <div class="sidebar-header">
+            <div class="sidebar-header" style="background-image: url(vendor/Images/mainbg.jpg)">
                 <div class="col-sm-11">
                 <img src="vendor/Images/Iqlogo.png" alt="" class="img-fluid">
                 </div>
@@ -96,6 +96,18 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#advSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-users"></i>  Adventurer</a>
+                    <ul class="collapse list-unstyled" id="advSubmenu">
+                        <li>
+                            <a href="create_quest.php">Recruit Adventurer</a>
+                        </li>
+                        <li>
+                            <a href="main_quest.php"> Adventurer List</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
                      <a href="dashboard.php"><i class="fas fa-list"></i>  Report</a>
                 </li>
                 <?php
@@ -139,7 +151,7 @@
                     </button>
                     </a>
                     <a href="logout.php"> 
-                    <button class="btn btn-light d-inline-block ml-auto" type="button" style="color: #23b5b5">
+                    <button class="btn btn-danger d-inline-block " type="button" >
                         <i class="fas fa-sign-out-alt"></i>
                         Logout
                     </button>

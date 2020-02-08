@@ -1,6 +1,4 @@
-body{
-    background-image: url(../vendor/Images/Loginbg.jpg) !important;
-}
+ 
 
 .imgicon {
     width: 500px;
@@ -8,6 +6,6 @@ body{
 }
 
 .btn-primary{
-    background-color: #23b5b5;
+    background-color: #23b5b5 !important;
     color: #fff
 }
