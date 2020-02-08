@@ -65,7 +65,7 @@ $sql = "insert into submit_quest (id_user, id_quest, file) values('".$_SESSION['
 
 $result = $conn->query($sql);
 // echo "$sql";
-header("Location: dashboard.php");
+header("Location: completed_quest.php");
 die();
 
 ?>

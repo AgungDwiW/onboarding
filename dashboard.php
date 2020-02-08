@@ -95,16 +95,18 @@ include ("sidebar_top2.html");
         $tot = $result->num_rows;
         if ($result->num_rows>0) {
           //login success
-          while($row = $result->fetch_assoc()) {
+          $count = 0;
+          while($row = $result->fetch_assoc() and $count<4) {
             $sql = "SELECT * FROM submit_quest where id_user = ".$_SESSION['id']." and id_quest =  '" . $row['id'] . "'";
             $result2 = $conn->query($sql);
             if ($result2->num_rows>0){
               $tot-=1;
               continue;
             }
+            $count+=1;
             $subtitle = substr($row['subtitle'],0,80) ;
             $subtitle = "".$subtitle . "..."; 
-
+            $deadline = $row['deadline']==''?"-":$row['deadline'];
 
             $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
             echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
@@ -114,11 +116,12 @@ include ("sidebar_top2.html");
             echo '<h4 class="card-title">'.$row['title'].'</h4>';
             echo "<hr>";
             echo '<h5 class="card-subtitle mb-2 text-muted">'.$quest_stat.'</h5>';
-            echo '<p class="card-text">'.$subtitle.'</p>';
+            echo '<p class="card-text">'.$subtitle.'</p></div>';
             echo '<div class="card-footer text-muted">';            
-            echo "Reward :".$row['reward'];
+            echo "Reward : ".$row['reward'];
+            echo "<br>Deadline : ".$deadline. "</p>";
             echo "</a>";
-            echo "</div></div></div></div>";
+            echo "</div></div></div>";
             
           }
         }
