@@ -3,13 +3,14 @@ include ("sidebar_top.html");
 ?>
 
      <link rel="stylesheet" type="text/css" href="Style/dashboard.css">
+ 
 <?php
 include ("sidebar_top2.html");
 ?>
 
   <!-- Navigation -->
   <!-- Page Content -->
-  <div class="container"  >
+  <div class="container" >
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
