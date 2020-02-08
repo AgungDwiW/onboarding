@@ -3,6 +3,21 @@ include ("sidebar_top.html");
 ?>
 
      <link rel="stylesheet" type="text/css" href="Style/dashboard.css">
+    <style>
+        .cd-foot{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+        .green{
+            background-color: #e4f5eb !important;
+            color: black;
+        }
+        .yellow{
+            background-color: #fcf9e6;
+            color: black;
+        }
+</style>
  
 <?php
 include ("sidebar_top2.html");
@@ -22,6 +37,7 @@ include ("sidebar_top2.html");
       <h3>There's a lot thing to do today, keep the spirit! </h3>
       
     </header>
+      <br>
 
     <!-- Page Features -->
     <div class="row text-center">
@@ -31,6 +47,7 @@ include ("sidebar_top2.html");
     	// ===============================admin card==============================================
     	if ($_SESSION['type'] == 0){
     ?>
+        
        <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="vendor/Images/private.png" alt="" style="height :150px">
@@ -39,7 +56,7 @@ include ("sidebar_top2.html");
             <p class="card-text">Call new adventurer to the village</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Recruit</a>
+            <a href="hire_adventurer.php" class="btn btn-primary">Recruit</a>
           </div>
         </div>
       </div>
@@ -52,7 +69,7 @@ include ("sidebar_top2.html");
             <p class="card-text">Look at the overal report of adventurers</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Report</a>
+            <a href="#" class="btn btn-primary" >Report</a>
           </div>
         </div>
       </div>
@@ -65,7 +82,7 @@ include ("sidebar_top2.html");
             <p class="card-text">Design the stage for your adventurer</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Stage</a>
+            <a href="#" class="btn btn-primary" >Stage</a>
           </div>
         </div>
       </div>
@@ -78,7 +95,7 @@ include ("sidebar_top2.html");
             <p class="card-text">Give quest to the adventurer!</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Quest</a>
+            <a href="main_quest.php" class="btn btn-primary">Quest</a>
           </div>
         </div>
       </div>
@@ -92,6 +109,7 @@ include ("sidebar_top2.html");
     	// ===============================admin card end==============================================
     	else if ($_SESSION['type'] == 2){
     ?>
+      
       <?php
         require('dbcon.php');
         $sql = "SELECT * FROM quest where (is_main = 1 and stage = ".$_SESSION['stage'].") or issued_to =  '" . $_SESSION['id'] . "'";
@@ -116,13 +134,20 @@ include ("sidebar_top2.html");
             $quest_stat = $row['is_main']==1?"Main Quest":"Sub Quest";
             echo '<div class="col-lg-3 col-md-6 mb-4" style="text-align: left">';  
             echo "<a href='quest_show.php?id=". $row['id']."'>";
-            echo '<div class="card h-100">';
-            echo '<div class="card-body">';
+            echo '<div class="card h-100 ">';
+            echo '<div class="card-body" style="height:420px;">';
             echo '<h4 class="card-title">'.$row['title'].'</h4>';
             echo "<hr>";
-            echo '<h5 class="card-subtitle mb-2 text-muted">'.$quest_stat.'</h5>';
+              if ($row['is_main']==0){
+                  echo '<h5 class="card-subtitle mb-2 text-muted green">'.$quest_stat.'</h5>';
+              }
+              else{
+                  
+            echo '<h5 class="card-subtitle mb-2 text-muted yellow">'.$quest_stat.'</h5>';
+              }
             echo '<p class="card-text">'.$subtitle.'</p></div>';
-            echo '<div class="card-footer text-muted">';            
+              echo '<div class="card-footer text-muted cd-foot">'; 
+                     
             echo "Reward : ".$row['reward'];
             echo "<br>Deadline : ".$deadline. "</p>";
             echo "</a>";

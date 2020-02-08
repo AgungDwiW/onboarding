@@ -1,6 +1,13 @@
 <?php
 include ("sidebar_top.html");
 ?>
+<style>
+    .card-main{
+        border-color: #23b5b5 !important;
+        color: #23b5b5 !important;
+        border-radius: 20px 20px 0px 0px;
+    }
+</style>
 <?php
 include ("sidebar_top2.html");
 ?>
@@ -11,17 +18,20 @@ include ("sidebar_top2.html");
         Main Quest List
     </div>
     <div class="card-body">
-		<div class="row">
-			<div class="col-sm-1">
+		<div class="row" style="margin-bottom: 20px;">
+			<div class="col-sm-3">
+				<input class="form-control" type="text" placeholder="Search" aria-label="Search" style="margin-bottom: 1rem">		
+			</div>
+            
+            <div class="col-sm-1">
 				<a href="create_quest.php"><button type="button" class="btn btn-primary btn-block">+</button></a>
 			</div>
 			<div class="col-sm-8">
 				
 			</div>
-			<div class="col-sm-3">
-				<input class="form-control" type="text" placeholder="Search" aria-label="Search" style="margin-bottom: 1rem">		
-			</div>
+			
 		</div>
+        
 
 		<?php
 			require('dbcon.php');
@@ -30,8 +40,8 @@ include ("sidebar_top2.html");
 	        if ($result->num_rows>0) {
 	          //login success
 	          while($row = $result->fetch_assoc()) {
-	            echo '<div class="card border-primary mb-12"  style="margin-bottom: 1rem">';
-	            echo '<div class="card-body text-primary">';
+	            echo '<div class="card border-primary mb-12 card-main"  style="margin-bottom: 1rem">';
+	            echo '<div class="card-body text-primary card-main">';
 	            $completed = '';
 	            $file = '';
 	            if ($row['is_main']==0 and $row['completed'] ==1){

@@ -1,6 +1,14 @@
 <?php
 include ("sidebar_top.html");
 ?>
+
+<style>
+    .submit{
+        margin: 10px;
+        border-radius: 30px;
+        background-color: #23b5b5;
+    }
+</style>
 <?php
 include ("sidebar_top2.html");
 $id = $_GET['id'];
@@ -33,7 +41,7 @@ if ($result->num_rows == 1) {
 				<input id="input-b1" name="fileToUpload" type="file" class="file" data-browse-on-zone-click="true" required>
 				<!-- <input type="file" class="form-control-file border" name = "image"> -->
                 <input type="hidden" name="id" value='<?php echo $id;?>'>
-				<input type="submit" name="submit">
+				<input class="submit" type="submit" name="submit">
 				
 		 </form>
     </div>
