@@ -3,10 +3,6 @@ create database iq;
 use iq;
 
 
-create table class(
-	id int auto_increment primary key,
-	name varchar(50)
-);
 
 create table user(
 	id int auto_increment primary key,
@@ -15,10 +11,11 @@ create table user(
 	name varchar(50),
 	email varchar(50),
 	status int,
-	class int,
-	credit int,
-	image_profile varchar(50) default 'Asset/Images/Profpic/profile.png',
-	FOREIGN KEY (class) REFERENCES class(id)
+	class varchar(50),
+	credit int default 0,
+	main_completed int default 0,
+	side_completed int default 0,
+	image_profile varchar(50) default 'Asset/Images/Profpic/profile.png'
 	-- status 0 = admin
 	-- status 1 = sub admin (buddy)
 	-- status 2 = user (newbie)
@@ -31,11 +28,9 @@ create table buddy_newbie(
 	FOREIGN key (id_buddy) REFERENCES user (id)
 );
 
-insert into class (name) values("HR");
-insert into class (name) values("IT");
-insert into user (username, password, name, email, status, class) values ("admin", "adminadmin", "superHR", "hr@hr.com", 0, 1);
-insert into user (username, password, name, email, status, class, credit) values ("budy", "budybudy", "budi budiman", "budi@hr.com", 1, 2, 25);
-insert into user (username, password, name, email, status, class) values ("newbie", "newbie", "newbie noob", "noob@hr.com", 2, 2);
+insert into user (username, password, name, email, status, class) values ("admin", "adminadmin", "superHR", "hr@hr.com", 0, "HR");
+insert into user (username, password, name, email, status, class, credit) values ("budy", "budybudy", "budi budiman", "budi@hr.com", 1, "IT", 25);
+insert into user (username, password, name, email, status, class) values ("newbie", "newbie", "newbie noob", "noob@hr.com", 2, "IT");
 
 insert into buddy_newbie(id_newbie, id_buddy) values (3,2);
 
@@ -50,6 +45,7 @@ create table quest(
 	deadline int,
 	reward int,
 	issued_to int,
+	
 	FOREIGN key (issued_to) REFERENCES user(id),
 	FOREIGN key (issued_by) REFERENCES user(id)
 	-- type:
@@ -77,4 +73,4 @@ insert into quest(title, subtitle, is_main, type, stage, issued_by, reward ) val
 
 insert into quest(title, subtitle, is_main, type, stage, issued_by, reward, issued_to ) values ("Hello there, I'm your buddy!", 
 	"My name is Budi Budiman, hello I'm assigned as your buddy! I'm as happy as I am but at the same time I'm also sleepy, i haven't sleep last night because of my neighbour. Can you bring me a cup of coffe? I will wait at my desk at 6th row. Let's take a pic together to comemorate your new job!", 
-	1, "submit", 0, 2, 5, 3);
+	0, "submit", 0, 2, 5, 3);

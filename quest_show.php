@@ -29,9 +29,10 @@ if ($result->num_rows == 1) {
     <div class="card-body">
     	 <p class="card-text"><?php echo $quest['subtitle']; ?></p>
 
-    	 <form  method="post" action="dashboard.php" enctype="multipart/form-data" >
-				<input id="input-b1" name="image" type="file" class="file" data-browse-on-zone-click="true">
+    	 <form  method="post" action="submit_quest.php" enctype="multipart/form-data" >
+				<input id="input-b1" name="fileToUpload" type="file" class="file" data-browse-on-zone-click="true" required>
 				<!-- <input type="file" class="form-control-file border" name = "image"> -->
+                <input type="hidden" name="id" value='<?php echo $id;?>'>
 				<input type="submit" name="submit">
 				
 		 </form>
