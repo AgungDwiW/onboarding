@@ -17,17 +17,17 @@ include ("sidebar_top2.html");
 <div class="card table-responsive quest-card" >
     <!-- /.card-header -->
     <div class="card-header text-center quest-head">                              
-        Hire an Adventurer!
+        Hire a buddy!
     </div>
     <div class="card-body">
-    	<form method="POST" action="hire.php?>" id = "form" id = "form">
+    	<form method="POST" action="hire_b.php" id = "form" id = "form">
     	<div class="form-group">
-		    <label for="title">Adventurer Name:</label>
+		    <label for="title">Buddy Name:</label>
 		    <input type="text" class="form-control" placeholder="Name" id="title" name="name">
 		</div>
 
 		<div class="form-group">
-		    <label for="title">Adventurer Email:</label>
+		    <label for="title">Buddy Email:</label>
 		    <input type="text" class="form-control" placeholder="Email" id="email" name="email">
 		</div>
 
@@ -36,26 +36,6 @@ include ("sidebar_top2.html");
 		    <input type="text" class="form-control" placeholder="Email" id="email" name="class">
 		</div>
 
-		<div class="form-group">
-		    <label for="title">Buddy: </label>
-		    <select class="form-control" name="buddy">
-		    	<?php
-		    		require 'dbcon.php';
-		    		$sql = "SELECT * FROM user where status = 1";
-		    		echo "$sql";
-					$result = $conn->query($sql);
-
-					if ($result->num_rows == 1) {
-						//login success
-						while($row = $result->fetch_assoc()) {
-							echo "<option value='".$row['id']."' >".$row['name']."</option>";
-					    }
-					}
-		    	?>
-		    </select>
-		</div>
-    
-    
     	<div class="form-group">
 		    <label for="title">Username:</label>
 		    <input type="text" class="form-control" placeholder="username" id="username" name="username">
