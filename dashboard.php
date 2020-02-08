@@ -13,7 +13,8 @@ include ("sidebar_top2.html");
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 >Welcome <?php echo $_SESSION['name']; ?>!</h1>
+      <h1 >Welcome back <?php echo $_SESSION['name']; ?>! <br> </h1>
+      <h3>There's a lot thing to do today, keep the spirit! </h3>
       
     </header>
 
@@ -84,56 +85,45 @@ include ("sidebar_top2.html");
     	// ===============================admin card end==============================================
     	// ===============================admin card end==============================================
     	// ===============================admin card end==============================================
-    	else if ($_SESSION['type'] == 1){
+    	else if ($_SESSION['type'] == 2){
     ?>
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <h4 class="card-title">Test for new adventurer</h4>
+            <h5 class="card-subtitle mb-2 text-muted">Main Quest - Test Quest</h5>
+            <p class="card-text">This vilage is already well fed and comfortable to live in but best thing won't last forever, 
+        we need champion to protect our vilage from future threat</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <h4 class="card-title">Pick some grass</h4>
+            <h5 class="card-subtitle mb-2 text-muted">Main Quest - Submit Quest</h5>
+            <p class="card-text">For starter please pick some grass that overgrow in the vilage. Take this chance to know the vilagers and submit the photo of your work</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <h4 class="card-title">Let's talk</h4>
+            <h5 class="card-subtitle mb-2 text-muted">Main Quest - Quisionary Quest</h5>
+            <p class="card-text">How was your first week? is it full of grass? Hahaha... calm down. Tell me what happen this past week.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" style="text-align: left">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
+            <h4 class="card-title">Hey its your neighbour</h4>
+            <h5 class="card-subtitle mb-2 text-muted">Sub Quest - Submit Quest</h5>
+            <p class="card-text">Hello there its me, jack can you take a photo of my house from top of that hill?</p>
           </div>
         </div>
       </div>
