@@ -22,11 +22,11 @@
                     if ($_SESSION['type']==2){
                 ?>
                 <li>
-                    <i class="fas fa-home"></i>
-                     <a href="dashboard.php">Home</a>
+                    
+                     <a href="dashboard.php"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Quest</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-book"></i> Quest</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Main Quest</a>
@@ -37,28 +37,39 @@
                         
                     </ul>
                 </li>
+                <li>
+                    
+                     <a href="dashboard.php"><i class="fas fa-comments"></i> Buddy Chat</a>
+                </li>
+                <li>
+                    
+                     <a href="dashboard.php"><i class="fas fa-phone-square"></i> Halo Bca</a>
+                </li>
                 <?php
                     }
                     if ($_SESSION['type']==1){
                 ?>
                 
                 <li>
-                     <a href="dashboard.php">Home</a>
+                     <a href="dashboard.php"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Quest</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-book"></i> Quest</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="#">Give Quest</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fas fa-scroll"></i> Quest Completion</a>
+                            <a href="#"> Quest Completion</a>
                         </li>
                         
                     </ul>
                 </li>
                 <li>
-                     <a href="dashboard.php">Companions Data</a>
+                     <a href="dashboard.php"><i class="fas fa-comments"></i> Companions Chat</a>
+                </li>
+                <li>
+                     <a href="dashboard.php"><i class="fas fa-database"></i> Companions Data</a>
                 </li>
                 <?php
                     }
