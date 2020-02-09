@@ -16,7 +16,7 @@ include ("sidebar_top2.html");
 
 <div class="card table-responsive quest-card" >
     <!-- /.card-header -->
-    <div class="card-header text-center quest-head">                              
+    <div class="card-header text-center quest-head" >                              
         Hire an Adventurer!
     </div>
     <div class="card-body">

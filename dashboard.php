@@ -17,6 +17,9 @@ include ("sidebar_top.html");
             background-color: #fcf9e6;
             color: black;
         }
+        .card{
+            border-radius: 20px;
+        }
 </style>
  
 <?php
@@ -145,13 +148,16 @@ include ("sidebar_top2.html");
             echo "<hr>";
               if ($row['is_main']==0){
                   echo '<h5 class="card-subtitle mb-2 text-muted green">'.$quest_stat.'</h5>';
+                  echo '<p class="card-text">'.$subtitle.'</p></div>';
+                    echo '<div class="card-footer text-muted cd-foot green">'; 
               }
               else{
                   
             echo '<h5 class="card-subtitle mb-2 text-muted yellow">'.$quest_stat.'</h5>';
+                  echo '<p class="card-text">'.$subtitle.'</p></div>';
+                    echo '<div class="card-footer text-muted cd-foot yellow">'; 
               }
-            echo '<p class="card-text">'.$subtitle.'</p></div>';
-              echo '<div class="card-footer text-muted cd-foot">'; 
+            
                      
             echo "Reward : ".$row['reward'];
             echo "<br>Deadline : ".$deadline. "</p>";

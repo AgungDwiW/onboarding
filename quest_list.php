@@ -35,7 +35,14 @@ include ("sidebar_top2.html");
             echo '<div class="card-footer text-muted">';            
             echo "Reward : ".$row['reward'];
             echo "<br>Deadline : ".$deadline. "</p>";
+              
             echo "</a>";
+              if ($row['is_main']==0){
+                  echo '<button class="btn btn-danger">Report';
+              }
+              else {
+                  
+              }
             echo "</div></div>";
             
           }
