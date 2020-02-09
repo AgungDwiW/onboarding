@@ -34,7 +34,12 @@ include ("sidebar_top2.html");
       if ($_SESSION['type']==1) echo "Buddy ";
       if ($_SESSION['type']==2) echo "Adventurer ";
       echo $_SESSION['name']; ?>! <br> </h1>
-      <h3>There's a lot thing to do today, keep the spirit! </h3>
+      <?php
+        if($_SESSION['type'] == 2){
+          echo "<h3> Stage - ".$_SESSION['stage']."</h3>";    
+        }
+      ?>
+      
       
     </header>
       <br>
