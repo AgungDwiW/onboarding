@@ -210,7 +210,7 @@ a.article:hover {
    color: #fff;
    text-align: center;
 }
-@media (max-width: 400px){
+@media (max-width: 500px){
 .and-hidden{
     display: none;
     visibility: hidden;
