@@ -33,7 +33,7 @@ include ("sidebar_top2.html");
 
 		<div class="form-group">
 		    <label for="title">Divisi:</label>
-		    <input type="text" class="form-control" placeholder="Email" id="email" name="class">
+		    <input type="text" class="form-control" placeholder="Divisi" id="email" name="class">
 		</div>
 
 		<div class="form-group">
