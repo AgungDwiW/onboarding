@@ -83,13 +83,13 @@ include ("sidebar_top2.html");
  
        <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="vendor/Images/report.png" alt="" style="height :150px">
+          <img class="card-img-top" src="vendor/Images/tree.jpg" alt="" style="height :150px">
           <div class="card-body">
             <h4 class="card-title">Recruit new budy</h4>
             <p class="card-text">Ask a vilager to company the new adventurer</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary" >Recruit</a>
+            <a href="hire_buddy.php" class="btn btn-primary" >Recruit</a>
           </div>
         </div>
       </div>

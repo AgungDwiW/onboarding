@@ -17,7 +17,7 @@ include ("sidebar_top2.html");
 <div class="card table-responsive quest-card" >
     <!-- /.card-header -->
     <div class="card-header text-center quest-head">                              
-        Hire a buddy!
+        Recruit a buddy!
     </div>
     <div class="card-body">
     	<form method="POST" action="hire_b.php" id = "form" id = "form">
@@ -33,7 +33,7 @@ include ("sidebar_top2.html");
 
 		<div class="form-group">
 		    <label for="title">Divisi:</label>
-		    <input type="text" class="form-control" placeholder="Email" id="email" name="class">
+		    <input type="text" class="form-control" placeholder="Divisi" id="email" name="class">
 		</div>
 
     	<div class="form-group">
