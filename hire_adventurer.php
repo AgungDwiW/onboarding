@@ -42,10 +42,9 @@ include ("sidebar_top2.html");
 		    	<?php
 		    		require 'dbcon.php';
 		    		$sql = "SELECT * FROM user where status = 1";
-		    		echo "$sql";
 					$result = $conn->query($sql);
 
-					if ($result->num_rows == 1) {
+					if ($result->num_rows > 0) {
 						//login success
 						while($row = $result->fetch_assoc()) {
 							echo "<option value='".$row['id']."' >".$row['name']."</option>";
