@@ -28,7 +28,7 @@ include ("sidebar_top2.html");
 		  	<h5 class="card-title">Coupon for cereals - 100 credit</h5>
 		  	<h6 class="card-subtitle mb-2 text-muted">Oatmeal x5; chocho crunchx10</h6>
 		    <p class="card-text">A cereal that perfect to start your day! grab now, only 100 credit</p>	
-		    <a href="#" class="card-link">Buy</a>
+		    <a href="#" class="card-link" data-toggle="modal" data-target="#rebukeWarning" >Buy</a>
 		  </div>
 		</div>
 
@@ -37,7 +37,7 @@ include ("sidebar_top2.html");
 		  	<h5 class="card-title">Coupon for hug (once) - 10 credit</h5>
 		  	<h6 class="card-subtitle mb-2 text-muted">a hug full of love from our mascot</h6>
 		    <p class="card-text">You know him? of course you know! he is our maskot didnt you want to hug him? that round shape, that fluffy body!</p>	
-		    <a href="#" class="card-link">Buy</a>
+		    <a href="#" class="card-link" data-toggle="modal" data-target="#rebukeWarning" >Buy</a>
 		  </div>
 		</div>
 
@@ -46,7 +46,7 @@ include ("sidebar_top2.html");
 		  	<h5 class="card-title">Girlfriend / Boyfriend - 999999999 credit</h5>
 		  	<h6 class="card-subtitle mb-2 text-muted">No comment</h6>
 		    <p class="card-text">uh, yes that..</p>	
-		    <a href="#" class="card-link">Buy</a>
+		    <a href="#" class="card-link" data-toggle="modal" data-target="#rebukeWarning" >Buy</a>
 		  </div>
 		</div>
 
@@ -55,17 +55,16 @@ include ("sidebar_top2.html");
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Rebuke!</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Yay!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Are you really want to rebuke this submission? doing so will forfeit the completion reward from this quest and mark it as uncompleted quest (adventurer may resubmit his submission).
+      	Coupon has been sent to your email!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a id = "rebuke_id"><button type="button" class="btn btn-primary">Yes</button></a>
       </div>
     </div>
   </div>

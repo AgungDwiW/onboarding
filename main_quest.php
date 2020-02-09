@@ -62,7 +62,7 @@ include ("sidebar_top2.html");
 	            echo '<p class="card-text">'.$row['subtitle'].'</p>	';
 	            if (($row['is_main']==0 and $row['completed']==1))echo '<p class="card-text">Completed at : '.$submitted.'</p>' ;
 	            echo '<a href="#" class="card-link">Detail</a>';
-	            if (!($row['is_main']==0 and $row['completed']==1))echo '<a href="#" class="card-link">Edit</a>';
+	            if (!($row['is_main']==0 and $row['completed']==1))echo '<a href="edit_quest.php?id='.$row['id'].'" class="card-link">Edit</a>';
 	            if (($row['is_main']==0 and $row['completed']==1))echo '<a download="submission.jpg" href="'.$file.'" 
 	            class="card-link">View Submision</a>';
 	            if (($row['is_main']==0 and $row['completed']==1))echo '<a href="#" class="card-link" style="color:red" data-toggle="modal" data-target="#rebukeWarning" id = '.$row['id'].'  onClick="reply_click(this.id)" >Rebuke</a>';
