@@ -160,8 +160,11 @@
                     <a href="#">Contact</a>
                 </li> -->
             </ul>
-            
+           
             <ul class="list-unstyled CTAs">
+                 <?php 
+            if($_SESSION['type'] ==2 ){
+            ?>
                 <li style="text-align: center">
                     <p style="font-size: 18px;text-align: left;">Quest left to next Level:    <?php 
                         $stage = 2 - $_SESSION['main'];
@@ -169,7 +172,8 @@
                         echo $stage ?></p>
                     <p style="background-color: <?php echo $_SESSION['stage']==1?"#23b5b5":"#428bbc"; ?>; border-radius: 20px ; color: #fff; margin-left: 20px;margin-right: 20px;" > <?php echo $_SESSION['stage']==1?"Stage 1":"Stage2";?></p>
                 </li>
-                
+            <?php
+            }?>    
                 <li style="text-align: center;; ">
                     <p> BCA Interactive Quest</p>
                 </li>
@@ -183,6 +187,7 @@
                     <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
                 </li> -->
             </ul>
+            
         </nav>
 
         <!-- Page Content  -->

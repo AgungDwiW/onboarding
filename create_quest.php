@@ -115,7 +115,7 @@ include ("sidebar_top2.html");
 
 			     	<?php
 						require ("dbcon.php");
-						$sql = 'SELECT user.name, user.id FROM buddy_newbie INNER JOIN user ON buddy_newbie.id_newbie=user.id';
+						$sql = 'SELECT user.name, user.id FROM buddy_newbie INNER JOIN user ON buddy_newbie.id_newbie=user.id where buddy_newbie.id_buddy = "'.$_SESSION['id'].'"';
 						$result = $conn->query($sql);
 						if ($result->num_rows >= 1) {
 							//login success
