@@ -98,17 +98,14 @@ include ("sidebar_top2.html");
 		{
 		?>
 		<div class="form-group">
-			<div class="row">
-				<div class="col">
+			
 					<label for="title">Duration (in day):</label>
 				    <input type="number" class="form-control" placeholder="Quest Deadline" id="title" name="deadline" min="1">
-			    </div>
-			    <div class="col">
+			   </div><div class="form-group">
 			    	<label for="title">Reward (Credit left : <?php echo $_SESSION['credit']?>):</label>
 				    <input type="number" class="form-control" placeholder="Reward" id="title" name="credit" min = 1 max = <?php echo $_SESSION['credit'] ?>>
-			    </div>
 		    </div>
-		</div>
+		
 		<div class="form-group">
 			<label for="title">To:</label>
 		    <select class="form-control" name="issued_to" id="issued_to">
